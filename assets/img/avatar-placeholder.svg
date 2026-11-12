@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" fill="none">
+  <defs>
+    <linearGradient id="cardBg" x1="0" y1="0" x2="320" y2="320" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#050B18"/>
+      <stop offset="100%" stop-color="#020408"/>
+    </linearGradient>
+    <linearGradient id="cyanBlue" x1="40" y1="40" x2="280" y2="280" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#BAE6FD"/>
+      <stop offset="50%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#1E3A8A"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#38BDF8" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="320" height="320" rx="32" fill="url(#cardBg)"/>
+  <circle cx="160" cy="140" r="130" fill="url(#glow)"/>
+  <circle cx="160" cy="126" r="46" fill="#091938" stroke="url(#cyanBlue)" stroke-width="2.5"/>
+  <path d="M84 268C84 226.026 118.026 192 160 192C201.974 192 236 226.026 236 268" stroke="url(#cyanBlue)" stroke-width="2.5" stroke-linecap="round" fill="#091938" fill-opacity="0.7"/>
+  <text x="160" y="136" text-anchor="middle" fill="#ECF8FF" font-family="'Instrument Serif', Georgia, serif" font-size="34" letter-spacing="1">kLL</text>
+</svg>

@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>geovani kALiL dev — geovanikalil.site</title>
+  <meta name="description" content="portfólio e site pessoal de Geovani Kalil (kALiL) — engenheiro de controle e automação, engenheiro de software, analista de dados, especialista em deep learning e visão computacional." />
+  <meta name="author" content="Geovani Kalil" />
+  <meta name="theme-color" content="#0A1128" />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://geovanikalil.site/" />
+  <meta property="og:title" content="geovani kALiL dev — geovanikalil.site" />
+  <meta property="og:description" content="geovani kALiL // the wired" />
+  <meta property="og:locale" content="pt_BR" />
+
+  <!-- Favicon & Manifest -->
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+  <link rel="manifest" href="site.webmanifest" />
+
+  <!-- Google Fonts: Inter, JetBrains Mono & Instrument Serif -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <!-- Background Ambient Glow & Grid -->
+  <div class="bg-ambient" aria-hidden="true"></div>
+  <div class="bg-grid" aria-hidden="true"></div>
+
+  <!-- ==================== HEADER / NAVBAR ==================== -->
+  <header class="site-header" id="site-header">
+    <div class="container nav-container">
+      <a href="#inicio" class="brand" aria-label="geovani kALiL dev">
+        <span class="brand-mark">kLL</span>
+        <span class="brand-text">geovani kALiL dev</span>
+      </a>
+
+      <div class="nav-right">
+        <nav class="nav-links" id="nav-links" aria-label="navegação principal">
+          <a href="#inicio" class="nav-link active" data-i18n="nav.home">início</a>
+          <a href="#sobre" class="nav-link" data-i18n="nav.about">sobre mim</a>
+          <a href="#projetos" class="nav-link" data-i18n="nav.projects">projetos</a>
+          <a href="#artigos" class="nav-link" data-i18n="nav.articles">artigos</a>
+          <a href="#contato" class="nav-link" data-i18n="nav.contact">contato</a>
+          <a href="#contato" class="btn btn-primary nav-cta" data-i18n="nav.cta">vamos conversar</a>
+        </nav>
+
+        <!-- Seletor de idioma discreto e funcional (pt / en) -->
+        <div class="lang-switcher" role="group" aria-label="idioma / language">
+          <button type="button" class="lang-btn active" data-lang="pt">pt</button>
+          <button type="button" class="lang-btn" data-lang="en">en</button>
+        </div>
+
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="menu" aria-expanded="false">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==================== 1. INÍCIO / HERO SECTION ==================== -->
+    <section class="hero" id="inicio">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="status-badge">
+            <span class="status-dot" aria-hidden="true"></span>
+            <span data-i18n="hero.status">disponível para novos projetos e colaborações técnicas</span>
+          </div>
+
+          <h1 class="hero-title" data-i18n="hero.title">
+            geovani kALiL // the wired
+          </h1>
+
+          <p class="hero-description" data-i18n="hero.description">
+            olá, eu sou <strong>Geovani Kalil</strong>. engenheiro de controle e automação, engenheiro de software, analista de dados e especialista em deep learning e visão computacional.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#projetos" class="btn btn-primary">
+              <span data-i18n="hero.btnProjects">explorar projetos</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <a href="#sobre" class="btn btn-secondary" data-i18n="hero.btnAbout">minha trajetória</a>
+            <a href="#artigos" class="btn btn-ghost" data-i18n="hero.btnArticles">ler artigos →</a>
+          </div>
+
+          <div class="hero-metrics">
+            <div>
+              <div class="metric-value" data-i18n="hero.metric1Value">engenharia</div>
+              <div class="metric-label" data-i18n="hero.metric1Label">controle, automação & software</div>
+            </div>
+            <div>
+              <div class="metric-value" data-i18n="hero.metric2Value">dados & ia</div>
+              <div class="metric-label" data-i18n="hero.metric2Label">deep learning & visão computacional</div>
+            </div>
+            <div>
+              <div class="metric-value" data-i18n="hero.metric3Value">forum/discussao</div>
+              <div class="metric-label" data-i18n="hero.metric3Label">arte, ciência & tecnologia</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Visual Terminal Card -->
+        <div class="hero-visual">
+          <div class="terminal-card" aria-label="bloco de código developer de Geovani Kalil">
+            <div class="terminal-header">
+              <div class="terminal-dots" aria-hidden="true">
+                <span class="terminal-dot blue-1"></span>
+                <span class="terminal-dot blue-2"></span>
+                <span class="terminal-dot blue-3"></span>
+              </div>
+              <span class="terminal-title">geovani kalil dev</span>
+              <span></span>
+            </div>
+            <div class="terminal-body">
+              <pre class="terminal-code"><code>// about me
+const developer = {
+  nome: 'Geovani Kalil',
+  foco: [
+    'engenharia de software',
+    'analise de dados',
+    'visão computacional'
+  ],
+  filosofia: 'um dia o cego disse que voltaria a enxergar, todos riram dele, menos o surdo.'
+};
+export default developer;</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 2. SOBRE MIM ==================== -->
+    <section class="section" id="sobre">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow" data-i18n="about.eyebrow">01 // sobre mim</span>
+          <h2 class="section-title" data-i18n="about.title">formação, trajetória e visão técnica</h2>
+          <p class="section-subtitle" data-i18n="about.subtitle">
+            unindo engenharia de controle e automação, engenharia de software, análise de dados e inteligência artificial.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-content">
+            <p data-i18n="about.p1">
+              sou <strong>Geovani Kalil</strong> (<strong>kALiL</strong>) — engenheiro de controle e automação, engenheiro de software, analista de dados e especialista em deep learning e visão computacional.
+            </p>
+            <p data-i18n="about.p2">
+              minha trajetória integra o rigor matemático e físico da engenharia de controle e automação com a arquitetura de software moderna, ciência de dados e modelos avançados de redes neurais profundas e visão computacional.
+            </p>
+
+            <!-- Marcos da Formação e Trajetória -->
+            <div class="timeline-list">
+              <div class="timeline-item">
+                <div class="timeline-period" data-i18n="about.t1Period">especialização & pesquisa</div>
+                <div class="timeline-role" data-i18n="about.t1Role">deep learning & visão computacional</div>
+                <div class="timeline-desc" data-i18n="about.t1Desc">
+                  desenvolvimento de modelos de redes neurais, processamento de imagens, detecção e reconhecimento visual aplicados a problemas complexos.
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-period" data-i18n="about.t2Period">software & dados</div>
+                <div class="timeline-role" data-i18n="about.t2Role">engenheiro de software & analista de dados</div>
+                <div class="timeline-desc" data-i18n="about.t2Desc">
+                  construção de sistemas escaláveis, pipelines analíticos, engenharia de dados, modelagem estatística e arquiteturas orientadas a dados.
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-period" data-i18n="about.t3Period">formação de base</div>
+                <div class="timeline-role" data-i18n="about.t3Role">engenheiro de controle e automação</div>
+                <div class="timeline-desc" data-i18n="about.t3Desc">
+                  fundamentos sólidos em sistemas dinâmicos, modelagem matemática, sinais, instrumentação, robótica e automação de processos.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stack & Especialidades -->
+          <aside class="skills-card" aria-label="especialidades">
+            <h3 class="skills-card-title">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                <polyline points="2 17 12 22 22 17"></polyline>
+                <polyline points="2 12 12 17 22 12"></polyline>
+              </svg>
+              <span data-i18n="about.skillsTitle">domínios & especialidades</span>
+            </h3>
+
+            <div class="skill-group">
+              <div class="skill-group-label" data-i18n="about.skillGroup1">áreas de atuação</div>
+              <div class="skill-tags">
+                <span class="tag">engenharia de controle e automação</span>
+                <span class="tag">engenharia de software</span>
+                <span class="tag">análise de dados</span>
+                <span class="tag">deep learning</span>
+                <span class="tag">visão computacional</span>
+              </div>
+            </div>
+
+            <div class="skill-group">
+              <div class="skill-group-label" data-i18n="about.skillGroup2">inteligência artificial & visão</div>
+              <div class="skill-tags">
+                <span class="tag">redes neurais profundas</span>
+                <span class="tag">processamento de imagens</span>
+                <span class="tag">opencv</span>
+                <span class="tag">pytorch / tensorflow</span>
+                <span class="tag">detecção & segmentação</span>
+              </div>
+            </div>
+
+            <div class="skill-group">
+              <div class="skill-group-label" data-i18n="about.skillGroup3">engenharia de software & dados</div>
+              <div class="skill-tags">
+                <span class="tag">python</span>
+                <span class="tag">sql & bancos de dados</span>
+                <span class="tag">typescript / javascript</span>
+                <span class="tag">arquitetura de sistemas</span>
+                <span class="tag">pipelines de dados</span>
+              </div>
+            </div>
+
+            <div class="skill-group">
+              <div class="skill-group-label" data-i18n="about.skillGroup4">controle, automação & fundamentos</div>
+              <div class="skill-tags">
+                <span class="tag">modelagem matemática</span>
+                <span class="tag">sistemas embarcados & iot</span>
+                <span class="tag">automação industrial</span>
+                <span class="tag">estatística aplicada</span>
+                <span class="tag">linux & git</span>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 3. PROJETOS TÉCNICOS ==================== -->
+    <section class="section" id="projetos">
+      <div class="container">
+        <div class="projects-toolbar">
+          <div class="section-header" style="margin-bottom: 0;">
+            <span class="section-eyebrow" data-i18n="projects.eyebrow">02 // portfólio</span>
+            <h2 class="section-title" data-i18n="projects.title">projetos técnicos</h2>
+            <p class="section-subtitle" data-i18n="projects.subtitle">
+              espaço estruturado para os projetos de engenharia de software, análise de dados, deep learning e visão computacional.
+            </p>
+          </div>
+
+          <div class="filter-tabs" role="tablist" aria-label="filtrar projetos">
+            <button class="filter-btn active" data-filter="all" role="tab" data-i18n="projects.filterAll">todos</button>
+            <button class="filter-btn" data-filter="vision" role="tab" data-i18n="projects.filterVision">visão computacional & dl</button>
+            <button class="filter-btn" data-filter="data" role="tab" data-i18n="projects.filterData">análise de dados</button>
+            <button class="filter-btn" data-filter="software" role="tab" data-i18n="projects.filterSoftware">engenharia de software</button>
+          </div>
+        </div>
+
+        <!-- Renderizado dinamicamente via assets/js/data.js e main.js -->
+        <div class="projects-grid" id="projects-grid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- ==================== 4. ARTIGOS / DISCUSSÕES ==================== -->
+    <section class="section" id="artigos">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow" data-i18n="articles.eyebrow">03 // publicações</span>
+          <h2 class="section-title" data-i18n="articles.title">artigos & discussões</h2>
+          <p class="section-subtitle" data-i18n="articles.subtitle">
+            espaço reservado para textos, ensaios técnicos, reflexões filosóficas e discussões sobre tecnologia.
+          </p>
+        </div>
+
+        <!-- Renderizado dinamicamente via assets/js/data.js e main.js -->
+        <div class="articles-list" id="articles-list"></div>
+      </div>
+    </section>
+
+    <!-- ==================== 5. CONTATO / LINKS ==================== -->
+    <section class="section" id="contato">
+      <div class="container">
+        <div class="contact-box">
+          <div>
+            <span class="section-eyebrow" data-i18n="contact.eyebrow">04 // contato & redes</span>
+            <h2 class="section-title" data-i18n="contact.title">vamos conversar?</h2>
+            <p class="section-subtitle" data-i18n="contact.subtitle">
+              conecte-se comigo através das redes abaixo pelo usuário unificado @geovanikalil ou envie uma mensagem direta.
+            </p>
+
+            <div class="contact-email-box">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+              <span>contato@geovanikalil.site</span>
+              <button class="copy-btn" id="copy-email-btn" data-email="contato@geovanikalil.site" type="button" data-i18n="contact.copy">
+                copiar
+              </button>
+            </div>
+          </div>
+
+          <div class="social-links-grid">
+            <!-- GitHub -->
+            <a href="https://github.com/geovanikalil" target="_blank" rel="noopener noreferrer" class="social-card">
+              <div class="social-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+              </div>
+              <div>
+                <div class="social-name">github</div>
+                <div class="social-handle">@geovanikalil</div>
+              </div>
+            </a>
+
+            <!-- LinkedIn -->
+            <a href="https://linkedin.com/in/geovanikalil" target="_blank" rel="noopener noreferrer" class="social-card">
+              <div class="social-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                  <rect x="2" y="9" width="4" height="12"></rect>
+                  <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+              </div>
+              <div>
+                <div class="social-name">linkedin</div>
+                <div class="social-handle">@geovanikalil</div>
+              </div>
+            </a>
+
+            <!-- Instagram -->
+            <a href="https://instagram.com/geovanikalil" target="_blank" rel="noopener noreferrer" class="social-card">
+              <div class="social-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+              </div>
+              <div>
+                <div class="social-name">instagram</div>
+                <div class="social-handle">@geovanikalil</div>
+              </div>
+            </a>
+
+            <!-- Telegram -->
+            <a href="https://t.me/geovanikalil" target="_blank" rel="noopener noreferrer" class="social-card">
+              <div class="social-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+              </div>
+              <div>
+                <div class="social-name">telegram</div>
+                <div class="social-handle">@geovanikalil</div>
+              </div>
+            </a>
+
+            <!-- Twitter / X -->
+            <a href="https://x.com/geovanikalil" target="_blank" rel="noopener noreferrer" class="social-card">
+              <div class="social-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4l11.733 16h4.267l-11.733 -16z"></path>
+                  <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path>
+                </svg>
+              </div>
+              <div>
+                <div class="social-name">twitter</div>
+                <div class="social-handle">@geovanikalil</div>
+              </div>
+            </a>
+
+            <!-- Miau (exclusivo via app) -->
+            <div class="social-card" aria-label="miau @kalil (somente app)">
+              <div class="social-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                  <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                </svg>
+              </div>
+              <div>
+                <div class="social-name" data-i18n="contact.miauName">miau (somente app)</div>
+                <div class="social-handle">@kalil</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== MODAL DE LEITURA DE ARTIGOS ==================== -->
+  <div class="modal-backdrop" id="article-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div>
+          <div class="article-meta" id="modal-meta"></div>
+          <h3 class="section-title" id="modal-title" style="font-size: 1.5rem; margin-bottom: 0;"></h3>
+        </div>
+        <button class="modal-close" id="modal-close" aria-label="fechar">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body" id="modal-body"></div>
+    </div>
+  </div>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        © <span id="current-year">2026</span> <strong>Geovani Kalil</strong> (<strong>kALiL</strong> — geovanikalil.site). <span data-i18n="footer.rights">todos os direitos reservados.</span>
+      </div>
+      <div data-i18n="footer.builtWith">
+        arte, tecnologia e filosofia.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

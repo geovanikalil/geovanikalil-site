@@ -1,0 +1,16 @@
+{
+  "name": "geovani kALiL dev — geovanikalil.site",
+  "short_name": "geovani kALiL",
+  "description": "geovani kALiL // the wired",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0A1128",
+  "theme_color": "#0A1128",
+  "icons": [
+    {
+      "src": "assets/img/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
