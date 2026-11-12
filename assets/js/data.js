@@ -8,7 +8,7 @@ window.SITE_DATA = {
     pt: {
       nav: {
         home: 'início',
-        about: 'sobre mim',
+        about: 'gk',
         projects: 'projetos',
         articles: 'artigos',
         contact: 'contato',
@@ -18,16 +18,14 @@ window.SITE_DATA = {
         status: 'disponível para novos projetos e colaborações técnicas',
         title: 'geovani kALiL // the wired',
         description:
-          'olá, eu sou <strong>Geovani Kalil</strong>. engenheiro de controle e automação, engenheiro de software, analista de dados e especialista em deep learning e visão computacional.',
+          'eu sou <strong>Geovani Kalil</strong>. reúno aqui os estudos, os projetos e as ideias que pretendo desenvolver no futuro, unindo a base das minhas formações com a minha dedicação prática. entre um projeto e outro, deixo registrado também um pouco da minha visão de mundo.',
         btnProjects: 'explorar projetos',
         btnAbout: 'minha trajetória',
         btnArticles: 'ler artigos →',
         metric1Value: 'engenharia',
-        metric1Label: 'controle, automação & software',
-        metric2Value: 'dados & ia',
-        metric2Label: 'deep learning & visão computacional',
-        metric3Value: 'forum/discussao',
-        metric3Label: 'arte, ciência & tecnologia',
+        metric1Label: 'controle e automação; software',
+        metric2Value: 'dev',
+        metric2Label: 'deep learning; visão computacional; analise de dados',
       },
       about: {
         eyebrow: '01 // sobre mim',
@@ -90,7 +88,7 @@ window.SITE_DATA = {
     en: {
       nav: {
         home: 'home',
-        about: 'about me',
+        about: 'gk',
         projects: 'projects',
         articles: 'articles',
         contact: 'contact',
@@ -100,16 +98,14 @@ window.SITE_DATA = {
         status: 'available for new projects and technical collaborations',
         title: 'geovani kALiL // the wired',
         description:
-          'hello, i am <strong>Geovani Kalil</strong>. control and automation engineer, software engineer, data analyst, and specialist in deep learning and computer vision.',
+          'i am <strong>Geovani Kalil</strong>. i gather here the studies, projects, and ideas i intend to develop in the future, combining the foundation of my academic backgrounds with my hands-on dedication. between one project and another, i also record a bit of my worldview.',
         btnProjects: 'explore projects',
         btnAbout: 'my journey',
         btnArticles: 'read articles →',
         metric1Value: 'engineering',
-        metric1Label: 'control, automation & software',
-        metric2Value: 'data & ai',
-        metric2Label: 'deep learning & computer vision',
-        metric3Value: 'forum/discussion',
-        metric3Label: 'art, science & technology',
+        metric1Label: 'control and automation; software',
+        metric2Value: 'dev',
+        metric2Label: 'deep learning; computer vision; data analysis',
       },
       about: {
         eyebrow: '01 // about me',
