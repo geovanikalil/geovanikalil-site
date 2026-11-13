@@ -21,41 +21,74 @@
   const currentYearSpan = document.getElementById('current-year');
   const langButtons = document.querySelectorAll('.lang-btn');
   const bgAmbient = document.querySelector('.bg-ambient');
+  const smokeCanvas = document.getElementById('smoke-canvas');
 
   const data = window.SITE_DATA || { i18n: {}, projects: [], articles: [] };
   let currentLang = localStorage.getItem('gk_lang') || 'pt';
   let currentFilter = 'all';
 
   /* ========================================================================
-     1. Header Scroll, Fundo Fumaceado no Scroll & Scroll-Spy
+     1. Header Scroll, Transição Azul -> Verde (Fundo e Botões) & Scroll-Spy
      ======================================================================== */
+  let scrollProgress = 0; // 0 no topo (azul), 1 no final do site (verde)
+  let lastScrollY = window.scrollY;
+  let scrollBoost = 0;
+
+  function lerpChannel(a, b, t) {
+    return Math.round(a + (b - a) * t);
+  }
+
+  function updateDynamicColors(progress) {
+    const rootStyle = document.documentElement.style;
+    // Topo (t = 0): Azul Claro (#38BDF8 -> 56, 189, 248) | Final (t = 1): Verde Terminal (#0FF05B -> 15, 240, 91)
+    const r = lerpChannel(56, 15, progress);
+    const g = lerpChannel(189, 240, progress);
+    const b = lerpChannel(248, 91, progress);
+
+    rootStyle.setProperty('--accent-terminal', `rgb(${r}, ${g}, ${b})`);
+    rootStyle.setProperty('--accent-glow', `rgba(${r}, ${g}, ${b}, 0.2)`);
+    rootStyle.setProperty('--accent-glow-strong', `rgba(${r}, ${g}, ${b}, 0.38)`);
+    rootStyle.setProperty('--accent-subtle', `rgba(${r}, ${g}, ${b}, 0.12)`);
+    rootStyle.setProperty('--border-subtle', `rgba(${r}, ${g}, ${b}, 0.18)`);
+    rootStyle.setProperty('--border-blue', `rgba(${r}, ${g}, ${b}, 0.36)`);
+    rootStyle.setProperty('--border-blue-strong', `rgba(${r}, ${g}, ${b}, 0.72)`);
+
+    // Atualiza também cada botão individualmente conforme sua altura na página + scroll
+    const docHeight = Math.max(1, document.documentElement.scrollHeight);
+    const allButtons = document.querySelectorAll('.btn, .filter-btn, .copy-btn');
+    allButtons.forEach((btn) => {
+      const rect = btn.getBoundingClientRect();
+      const absTop = rect.top + window.scrollY;
+      const posRatio = Math.min(1, Math.max(0, absTop / docHeight));
+      const tBtn = Math.min(1, Math.max(0, progress * 0.7 + posRatio * 0.3));
+
+      const br = lerpChannel(56, 15, tBtn);
+      const bg = lerpChannel(189, 240, tBtn);
+      const bb = lerpChannel(248, 91, tBtn);
+
+      btn.style.setProperty('--btn-accent', `rgb(${br}, ${bg}, ${bb})`);
+      btn.style.setProperty('--btn-glow', `rgba(${br}, ${bg}, ${bb}, 0.22)`);
+      btn.style.setProperty('--btn-glow-strong', `rgba(${br}, ${bg}, ${bb}, 0.4)`);
+      btn.style.setProperty('--btn-subtle', `rgba(${br}, ${bg}, ${bb}, 0.13)`);
+      btn.style.setProperty('--btn-border', `rgba(${br}, ${bg}, ${bb}, 0.42)`);
+    });
+  }
+
   function handleScroll() {
     const y = window.scrollY;
+    const maxScroll = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+    scrollProgress = Math.min(1, Math.max(0, y / maxScroll));
+
+    const deltaY = y - lastScrollY;
+    lastScrollY = y;
+    scrollBoost = Math.max(-6, Math.min(8, deltaY * 0.12));
+
+    updateDynamicColors(scrollProgress);
 
     if (y > 24) {
       header.classList.add('scrolled');
     } else {
       header.classList.remove('scrolled');
-    }
-
-    // Movimento do fundo fumaceado fosco reagindo ao scroll (para baixo e para cima)
-    if (bgAmbient) {
-      const x1 = Math.sin(y * 0.0025) * 150;
-      const y1 = -y * 0.22;
-      const rot1 = y * 0.03;
-      const scale1 = 1 + Math.sin(y * 0.0018) * 0.14;
-
-      const x2 = Math.cos(y * 0.0022) * -170;
-      const y2 = y * 0.16;
-      const rot2 = -(y * 0.025);
-
-      bgAmbient.style.setProperty('--smoke-x1', `${x1.toFixed(1)}px`);
-      bgAmbient.style.setProperty('--smoke-y1', `${y1.toFixed(1)}px`);
-      bgAmbient.style.setProperty('--smoke-rot1', `${rot1.toFixed(2)}deg`);
-      bgAmbient.style.setProperty('--smoke-scale1', `${scale1.toFixed(3)}`);
-      bgAmbient.style.setProperty('--smoke-x2', `${x2.toFixed(1)}px`);
-      bgAmbient.style.setProperty('--smoke-y2', `${y2.toFixed(1)}px`);
-      bgAmbient.style.setProperty('--smoke-rot2', `${rot2.toFixed(2)}deg`);
     }
 
     const sections = document.querySelectorAll('section[id]');
@@ -76,6 +109,99 @@
 
   window.addEventListener('scroll', handleScroll, { passive: true });
   handleScroll();
+
+  /* Motor de Fumaça Subindo no Background (Azul no topo -> Verde no final) */
+  if (smokeCanvas && smokeCanvas.getContext) {
+    const ctx = smokeCanvas.getContext('2d');
+    let width = (smokeCanvas.width = window.innerWidth);
+    let height = (smokeCanvas.height = window.innerHeight);
+
+    window.addEventListener(
+      'resize',
+      () => {
+        width = smokeCanvas.width = window.innerWidth;
+        height = smokeCanvas.height = window.innerHeight;
+      },
+      { passive: true }
+    );
+
+    const PUFF_COUNT = 28;
+    const puffs = [];
+
+    function createPuff(initialRandomY) {
+      const radius = 160 + Math.random() * 240;
+      return {
+        x: Math.random() * width,
+        y: initialRandomY ? Math.random() * (height + radius * 2) - radius : height + radius * 0.8,
+        radius,
+        vy: 0.55 + Math.random() * 0.95, // Velocidade de subida constante da fumaça
+        swayAmp: 0.4 + Math.random() * 0.9,
+        swayFreq: 0.004 + Math.random() * 0.006,
+        phase: Math.random() * Math.PI * 2,
+        alpha: 0.14 + Math.random() * 0.2,
+        toneShift: (Math.random() - 0.5) * 0.18, // Variação sutil entre nuvens de fumaça
+      };
+    }
+
+    for (let i = 0; i < PUFF_COUNT; i++) {
+      puffs.push(createPuff(true));
+    }
+
+    function lerp(a, b, t) {
+      return a + (b - a) * t;
+    }
+
+    let tick = 0;
+    function renderSmoke() {
+      tick += 1;
+      scrollBoost *= 0.9;
+
+      // Fundo base interpolando suavemente de Azul Industrial (#0A1128) no topo para Azul-Esverdeado escuro no final
+      const bgR = Math.round(lerp(8, 5, scrollProgress));
+      const bgG = Math.round(lerp(15, 24, scrollProgress));
+      const bgB = Math.round(lerp(38, 28, scrollProgress));
+      ctx.fillStyle = `rgb(${bgR}, ${bgG}, ${bgB})`;
+      ctx.fillRect(0, 0, width, height);
+
+      for (let i = 0; i < puffs.length; i++) {
+        const p = puffs[i];
+
+        // Movimento de subida da fumaça + ondulação lateral orgânica
+        p.y -= p.vy + scrollBoost * 0.35;
+        p.x += Math.sin(tick * p.swayFreq + p.phase) * p.swayAmp;
+
+        // Se subiu completamente além do topo, renasce na base
+        if (p.y < -p.radius * 1.1) {
+          p.y = height + p.radius * 0.9;
+          p.x = Math.random() * width;
+        } else if (p.y > height + p.radius * 1.2) {
+          p.y = -p.radius * 0.8;
+          p.x = Math.random() * width;
+        }
+
+        // Cor da fumaça interpolada pelo scroll:
+        // Topo (t = 0): Azul (#2E78EE / #38BDF8) -> Final (t = 1): Verde Terminal (#0FF05B)
+        const t = Math.min(1, Math.max(0, scrollProgress + p.toneShift));
+        const r = Math.round(lerp(48, 15, t));
+        const g = Math.round(lerp(132, 240, t));
+        const b = Math.round(lerp(242, 91, t));
+
+        const grad = ctx.createRadialGradient(p.x, p.y, p.radius * 0.08, p.x, p.y, p.radius);
+        grad.addColorStop(0, `rgba(${r}, ${g}, ${b}, ${p.alpha})`);
+        grad.addColorStop(0.5, `rgba(${r}, ${g}, ${b}, ${p.alpha * 0.45})`);
+        grad.addColorStop(1, `rgba(${r}, ${g}, ${b}, 0)`);
+
+        ctx.fillStyle = grad;
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+        ctx.fill();
+      }
+
+      requestAnimationFrame(renderSmoke);
+    }
+
+    requestAnimationFrame(renderSmoke);
+  }
 
   /* ========================================================================
      2. Menu Mobile
@@ -289,6 +415,7 @@
 
     renderProjects(currentFilter);
     renderArticles();
+    handleScroll();
   }
 
   langButtons.forEach((btn) => {

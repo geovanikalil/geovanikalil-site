@@ -16,7 +16,7 @@ window.SITE_DATA = {
       },
       hero: {
         status: 'disponível para novos projetos e colaborações técnicas',
-        title: 'geovani kALiL // the wired',
+        title: '// the wired',
         description:
           'eu sou <strong>Geovani Kalil</strong>. reúno aqui os estudos, os projetos e as ideias que pretendo desenvolver no futuro, unindo a base das minhas formações com a minha dedicação prática. entre um projeto e outro, deixo registrado também um pouco da minha visão de mundo.',
         btnProjects: 'explorar projetos',
@@ -28,12 +28,9 @@ window.SITE_DATA = {
         metric2Label: 'deep learning; visão computacional; analise de dados',
       },
       about: {
-        eyebrow: '01 // sobre mim',
-        title: 'formação, trajetória e visão técnica',
-        subtitle:
-          'unindo engenharia de controle e automação, engenharia de software, análise de dados e inteligência artificial.',
-        p1: 'sou <strong>Geovani Kalil</strong> (<strong>kALiL</strong>) — engenheiro de controle e automação, engenheiro de software, analista de dados e especialista em deep learning e visão computacional.',
-        p2: 'minha trajetória integra o rigor matemático e físico da engenharia de controle e automação com a arquitetura de software moderna, ciência de dados e modelos avançados de redes neurais profundas e visão computacional.',
+        eyebrow: '01 // geovani kalil',
+        title: 'formação e trajetória',
+        p1: 'minha base técnica vem da engenharia — controle, automação e software. na prática, aplico esse rigor para desenvolver soluções em análise de dados e inteligência artificial, com foco em deep learning e visão computacional.',
         t1Period: 'especialização & pesquisa',
         t1Role: 'deep learning & visão computacional',
         t1Desc:
@@ -96,7 +93,7 @@ window.SITE_DATA = {
       },
       hero: {
         status: 'available for new projects and technical collaborations',
-        title: 'geovani kALiL // the wired',
+        title: '// the wired',
         description:
           'i am <strong>Geovani Kalil</strong>. i gather here the studies, projects, and ideas i intend to develop in the future, combining the foundation of my academic backgrounds with my hands-on dedication. between one project and another, i also record a bit of my worldview.',
         btnProjects: 'explore projects',
@@ -108,12 +105,9 @@ window.SITE_DATA = {
         metric2Label: 'deep learning; computer vision; data analysis',
       },
       about: {
-        eyebrow: '01 // about me',
-        title: 'background, journey and technical vision',
-        subtitle:
-          'combining control and automation engineering, software engineering, data analysis and artificial intelligence.',
-        p1: 'i am <strong>Geovani Kalil</strong> (<strong>kALiL</strong>) — control and automation engineer, software engineer, data analyst, and specialist in deep learning and computer vision.',
-        p2: 'my journey bridges the mathematical and physical rigor of control and automation engineering with modern software architecture, data science, and advanced deep neural networks and computer vision models.',
+        eyebrow: '01 // geovani kalil',
+        title: 'education and journey',
+        p1: 'my technical foundation comes from engineering — control, automation and software. in practice, i apply this rigor to develop solutions in data analysis and artificial intelligence, focusing on deep learning and computer vision.',
         t1Period: 'specialization & research',
         t1Role: 'deep learning & computer vision',
         t1Desc:

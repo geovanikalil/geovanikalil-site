@@ -12,7 +12,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://geovanikalil.site/" />
   <meta property="og:title" content="geovani kALiL dev — geovanikalil.site" />
-  <meta property="og:description" content="geovani kALiL // the wired" />
+  <meta property="og:description" content="// the wired" />
   <meta property="og:locale" content="pt_BR" />
 
   <!-- Favicon & Manifest -->
@@ -28,8 +28,10 @@
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
-  <!-- Background Ambient Glow & Grid -->
-  <div class="bg-ambient" aria-hidden="true"></div>
+  <!-- Background Rising Smoke & Matte Diffuser -->
+  <div class="bg-ambient" aria-hidden="true">
+    <canvas id="smoke-canvas" class="smoke-canvas"></canvas>
+  </div>
   <div class="bg-grid" aria-hidden="true"></div>
 
   <!-- ==================== HEADER / NAVBAR ==================== -->
@@ -78,7 +80,7 @@
           </div>
 
           <h1 class="hero-title" data-i18n="hero.title">
-            geovani kALiL // the wired
+            // the wired
           </h1>
 
           <p class="hero-description" data-i18n="hero.description">
@@ -94,18 +96,6 @@
               <div class="metric-value" data-i18n="hero.metric2Value">dev</div>
               <div class="metric-label" data-i18n="hero.metric2Label">deep learning; visão computacional; analise de dados</div>
             </div>
-          </div>
-
-          <div class="hero-actions">
-            <a href="#projetos" class="btn btn-primary">
-              <span data-i18n="hero.btnProjects">explorar projetos</span>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-              </svg>
-            </a>
-            <a href="#sobre" class="btn btn-secondary" data-i18n="hero.btnAbout">minha trajetória</a>
-            <a href="#artigos" class="btn btn-ghost" data-i18n="hero.btnArticles">ler artigos →</a>
           </div>
         </div>
 
@@ -143,20 +133,14 @@ export default developer;</code></pre>
     <section class="section" id="sobre">
       <div class="container">
         <div class="section-header">
-          <span class="section-eyebrow" data-i18n="about.eyebrow">01 // sobre mim</span>
-          <h2 class="section-title" data-i18n="about.title">formação, trajetória e visão técnica</h2>
-          <p class="section-subtitle" data-i18n="about.subtitle">
-            unindo engenharia de controle e automação, engenharia de software, análise de dados e inteligência artificial.
-          </p>
+          <span class="section-eyebrow" data-i18n="about.eyebrow">01 // geovani kalil</span>
+          <h2 class="section-title" data-i18n="about.title">formação e trajetória</h2>
         </div>
 
         <div class="about-grid">
           <div class="about-content">
             <p data-i18n="about.p1">
-              sou <strong>Geovani Kalil</strong> (<strong>kALiL</strong>) — engenheiro de controle e automação, engenheiro de software, analista de dados e especialista em deep learning e visão computacional.
-            </p>
-            <p data-i18n="about.p2">
-              minha trajetória integra o rigor matemático e físico da engenharia de controle e automação com a arquitetura de software moderna, ciência de dados e modelos avançados de redes neurais profundas e visão computacional.
+              minha base técnica vem da engenharia — controle, automação e software. na prática, aplico esse rigor para desenvolver soluções em análise de dados e inteligência artificial, com foco em deep learning e visão computacional.
             </p>
 
             <!-- Marcos da Formação e Trajetória -->
