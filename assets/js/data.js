@@ -1,6 +1,6 @@
 /**
  * geovanikalil.site — dados bilíngues (pt / en), projetos e artigos
- * tudo em minúsculo, exceto o nome Geovani Kalil / kALiL.
+ * títulos preservados; textos descritivos censurados com #
  */
 
 window.SITE_DATA = {
@@ -15,34 +15,34 @@ window.SITE_DATA = {
         cta: 'vamos conversar',
       },
       hero: {
-        status: 'disponível para novos projetos e colaborações técnicas',
+        status: '########## #### ##### ######## # ############ ########',
         title: '// the wired',
         description:
-          'eu sou <strong>Geovani Kalil</strong>. reúno aqui os estudos, os projetos e as ideias que pretendo desenvolver no futuro, unindo a base das minhas formações com a minha dedicação prática. entre um projeto e outro, deixo registrado também um pouco da minha visão de mundo.',
+          '## ### ####### #####. ##### #### ## #######, ## ######## # ## ###### ### ######## ########### ## ######, ###### # #### ### ###### ######### ### # ##### ######### #######. ##### ## ####### # #####, ##### ########## ###### ## ##### ## ##### ##### ## #####.',
         btnProjects: 'explorar projetos',
         btnAbout: 'minha trajetória',
         btnArticles: 'ler artigos →',
         metric1Value: 'engenharia',
-        metric1Label: 'controle e automação; software',
+        metric1Label: '######## # #########; ########',
         metric2Value: 'dev',
-        metric2Label: 'deep learning; visão computacional; analise de dados',
+        metric2Label: '#### ########; ##### #############; ####### ## #####',
       },
       about: {
         eyebrow: '01 // geovani kalil',
         title: 'formação e trajetória',
-        p1: 'minha base técnica vem da engenharia — controle, automação e software. na prática, aplico esse rigor para desenvolver soluções em análise de dados e inteligência artificial, com foco em deep learning e visão computacional.',
+        p1: '##### #### ####### ### ## ########## — ########, ######### # ########. ## #######, ###### #### ##### #### ########### ######## ## ####### ## ##### # ############ ##########, ### #### ## #### ######## # ##### #############.',
         t1Period: 'especialização & pesquisa',
         t1Role: 'deep learning & visão computacional',
         t1Desc:
-          'desenvolvimento de modelos de redes neurais, processamento de imagens, detecção e reconhecimento visual aplicados a problemas complexos.',
+          '############### ## ####### ## ##### #######, ############# ## #######, ######## # ############## ###### ######### # ######### #########.',
         t2Period: 'software & dados',
         t2Role: 'engenheiro de software & analista de dados',
         t2Desc:
-          'construção de sistemas escaláveis, pipelines analíticos, engenharia de dados, modelagem estatística e arquiteturas orientadas a dados.',
+          '########## ## ######## ##########, ######### ##########, ########## ## #####, ######### ########### # ############ ########## # #####.',
         t3Period: 'formação de base',
         t3Role: 'engenheiro de controle e automação',
         t3Desc:
-          'fundamentos sólidos em sistemas dinâmicos, modelagem matemática, sinais, instrumentação, robótica e automação de processos.',
+          '########### ####### ## ######## #########, ######### ##########, ######, ##############, ######## # ######### ## #########.',
         skillsTitle: 'domínios & especialidades',
         skillGroup1: 'áreas de atuação',
         skillGroup2: 'inteligência artificial & visão',
@@ -53,7 +53,7 @@ window.SITE_DATA = {
         eyebrow: '02 // portfólio',
         title: 'projetos técnicos',
         subtitle:
-          'espaço estruturado para os projetos de engenharia de software, análise de dados, deep learning e visão computacional.',
+          '###### ########### #### ## ######## ## ########## ## ########, ####### ## #####, #### ######## # ##### #############.',
         filterAll: 'todos',
         filterSoftware: 'engenharia de software',
         filterData: 'análise de dados',
@@ -64,21 +64,20 @@ window.SITE_DATA = {
         eyebrow: '03 // publicações',
         title: 'artigos & discussões',
         subtitle:
-          'espaço reservado para textos, ensaios técnicos, reflexões filosóficas e discussões sobre tecnologia.',
+          '###### ######### #### ######, ####### ########, ######### ########### # ########## ##### ##########.',
         readMore: 'ler texto completo',
       },
       contact: {
         eyebrow: '04 // contato & redes',
         title: 'vamos conversar?',
         subtitle:
-          'conecte-se comigo através das redes abaixo pelo usuário unificado @geovanikalil (ou @kalil no miau) ou envie uma mensagem direta.',
+          '########## ###### ####### ### ##### ###### #### ####### ######### ############# ## ##### ### ######## ######.',
         copy: 'copiar',
         copied: 'copiado!',
-        miauName: 'miau (somente app)',
       },
       footer: {
-        rights: 'todos os direitos reservados.',
-        builtWith: 'arte, tecnologia e filosofia.',
+        rights: '##### ## ######## ##########.',
+        builtWith: '####, ########## # #########.',
       },
     },
 
@@ -92,34 +91,34 @@ window.SITE_DATA = {
         cta: 'vamos conversar',
       },
       hero: {
-        status: 'available for new projects and technical collaborations',
+        status: '######### ### ### ######## ### ######### ##############',
         title: '// the wired',
         description:
-          'i am <strong>Geovani Kalil</strong>. i gather here the studies, projects, and ideas i intend to develop in the future, combining the foundation of my academic backgrounds with my hands-on dedication. between one project and another, i also record a bit of my worldview.',
+          '# ## ####### #####. # ###### #### ### #######, ########, ### ##### # ###### ## ####### ## ### ######, ######### ### ########## ## ## ######## ########### #### ## ######## ##########. ####### ### ####### ### #######, # #### ###### # ### ## ## #########.',
         btnProjects: 'explore projects',
         btnAbout: 'my journey',
         btnArticles: 'read articles →',
         metric1Value: 'engineering',
-        metric1Label: 'control and automation; software',
+        metric1Label: '####### ### ##########; ########',
         metric2Value: 'dev',
-        metric2Label: 'deep learning; computer vision; data analysis',
+        metric2Label: '#### ########; ######## ######; #### ########',
       },
       about: {
         eyebrow: '01 // geovani kalil',
         title: 'education and journey',
-        p1: 'my technical foundation comes from engineering — control, automation and software. in practice, i apply this rigor to develop solutions in data analysis and artificial intelligence, focusing on deep learning and computer vision.',
+        p1: '## ######### ########## ##### #### ########### — #######, ########## ### ########. ## ########, # ##### #### ##### ## ####### ######### ## #### ######## ### ########## ############, ######## ## #### ######## ### ######## ######.',
         t1Period: 'specialization & research',
         t1Role: 'deep learning & computer vision',
         t1Desc:
-          'development of neural network models, image processing, object detection and visual recognition applied to complex problems.',
+          '########### ## ###### ####### ######, ##### ##########, ###### ######### ### ###### ########### ####### ## ####### ########.',
         t2Period: 'software & data',
         t2Role: 'software engineer & data analyst',
         t2Desc:
-          'building scalable systems, analytical pipelines, data engineering, statistical modeling and data-driven architectures.',
+          '######## ######## #######, ########## #########, #### ###########, ########### ######## ### ########### #############.',
         t3Period: 'core education',
         t3Role: 'control and automation engineer',
         t3Desc:
-          'strong foundation in dynamical systems, mathematical modeling, signals, instrumentation, robotics and process automation.',
+          '###### ########## ## ######### #######, ############ ########, #######, ###############, ######## ### ####### ##########.',
         skillsTitle: 'domains & specialties',
         skillGroup1: 'core fields',
         skillGroup2: 'artificial intelligence & vision',
@@ -130,7 +129,7 @@ window.SITE_DATA = {
         eyebrow: '02 // portfolio',
         title: 'technical projects',
         subtitle:
-          'structured space for software engineering, data analysis, deep learning and computer vision projects.',
+          '########## ##### ### ######## ###########, #### ########, #### ######## ### ######## ###### ########.',
         filterAll: 'all',
         filterSoftware: 'software engineering',
         filterData: 'data analysis',
@@ -141,26 +140,25 @@ window.SITE_DATA = {
         eyebrow: '03 // publications',
         title: 'articles & discussions',
         subtitle:
-          'dedicated space for technical essays, philosophical reflections and discussions on technology.',
+          '######### ##### ### ######### ######, ############# ########### ### ########### ## ##########.',
         readMore: 'read full text',
       },
       contact: {
         eyebrow: '04 // contact & links',
         title: 'vamos conversar?',
         subtitle:
-          'connect with me across all platforms via @geovanikalil (or @kalil on miau) or send a direct message.',
+          '####### #### ## ###### ### ######### ### ############# ## #### # ###### #######.',
         copy: 'copy',
         copied: 'copied!',
-        miauName: 'miau (app-only)',
       },
       footer: {
-        rights: 'all rights reserved.',
-        builtWith: 'art, technology and philosophy.',
+        rights: '### ###### ########.',
+        builtWith: '###, ########## ### ##########.',
       },
     },
   },
 
-  /* Seção de Projetos estruturada e pronta para receber os projetos específicos */
+  /* Seção de Projetos: apenas títulos visíveis, textos censurados com # */
   projects: [
     {
       id: 'proj-1',
@@ -174,10 +172,10 @@ window.SITE_DATA = {
         en: 'project #01 — computer vision & deep learning',
       },
       description: {
-        pt: 'espaço estruturado para detalhamento técnico do projeto de visão computacional e redes neurais profundas.',
-        en: 'structured space ready for technical details of the computer vision and deep neural networks project.',
+        pt: '###### ########### #### ############ ####### ## ####### ## ##### ############# # ##### ####### #########.',
+        en: '########## ##### ##### ### ######### ####### ## ### ######## ###### ### #### ###### ######## #######.',
       },
-      stack: ['python', 'pytorch', 'opencv', 'deep learning'],
+      stack: ['######', '#######', '######', '#### ########'],
       githubUrl: 'https://github.com/geovanikalil',
       liveUrl: '',
     },
@@ -193,10 +191,10 @@ window.SITE_DATA = {
         en: 'project #02 — data analysis & engineering',
       },
       description: {
-        pt: 'espaço estruturado para detalhamento de pipeline analítico, modelagem estatística e visualização de dados.',
-        en: 'structured space ready for analytical pipeline, statistical modeling and data visualization details.',
+        pt: '###### ########### #### ############ ## ######## #########, ######### ########### # ############ ## #####.',
+        en: '########## ##### ##### ### ########## ########, ########### ######## ### #### ############# #######.',
       },
-      stack: ['python', 'sql', 'pandas', 'data analysis'],
+      stack: ['######', '###', '######', '#### ########'],
       githubUrl: 'https://github.com/geovanikalil',
       liveUrl: '',
     },
@@ -212,16 +210,16 @@ window.SITE_DATA = {
         en: 'project #03 — software architecture & engineering',
       },
       description: {
-        pt: 'espaço estruturado para detalhamento de aplicação escalável, arquitetura limpa e sistemas distribuídos.',
-        en: 'structured space ready for scalable application, clean architecture and distributed systems details.',
+        pt: '###### ########### #### ############ ## ######### #########, ########### ##### # ######## ############.',
+        en: '########## ##### ##### ### ######## ###########, ##### ############ ### ########### ####### #######.',
       },
-      stack: ['typescript', 'node.js', 'arquitetura', 'api'],
+      stack: ['##########', '#######', '###########', '###'],
       githubUrl: 'https://github.com/geovanikalil',
       liveUrl: '',
     },
   ],
 
-  /* Seção de Artigos estruturada e pronta para receber os textos específicos */
+  /* Seção de Artigos: apenas títulos visíveis, textos censurados com # */
   articles: [
     {
       id: 'art-1',
@@ -230,51 +228,51 @@ window.SITE_DATA = {
         en: 'computer vision',
       },
       date: {
-        pt: 'em breve',
-        en: 'coming soon',
+        pt: '## #####',
+        en: '###### ####',
       },
       readTime: {
-        pt: 'leitura técnica',
-        en: 'technical read',
+        pt: '####### #######',
+        en: '######### ####',
       },
       title: {
         pt: 'artigo #01 — deep learning e percepção visual em sistemas modernos',
         en: 'article #01 — deep learning and visual perception in modern systems',
       },
       summary: {
-        pt: 'espaço estruturado e pronto para publicação do texto completo sobre visão computacional e aprendizado profundo.',
-        en: 'structured space ready for publishing the full text on computer vision and deep learning.',
+        pt: '###### ########### # ###### #### ########## ## ##### ######## ##### ##### ############# # ########### ########.',
+        en: '########## ##### ##### ### ########## ### #### #### ## ######## ###### ### #### ########.',
       },
       content: {
-        pt: '<p>este espaço está pronto para receber o conteúdo completo do artigo de <strong>Geovani Kalil</strong>.</p>',
-        en: '<p>this space is ready to receive the full article content by <strong>Geovani Kalil</strong>.</p>',
+        pt: '<p>#### ###### #### ###### #### ####### # ######## ######## ## ###### ## ####### #####.</p>',
+        en: '<p>#### ##### ## ##### ## ####### ### #### ####### ####### ## ####### #####.</p>',
       },
     },
     {
       id: 'art-2',
       topic: {
-        pt: 'filosofia & tecnologia',
-        en: 'philosophy & technology',
+        pt: 'forum/discussao',
+        en: 'forum/discussion',
       },
       date: {
-        pt: 'em breve',
-        en: 'coming soon',
+        pt: '## #####',
+        en: '###### ####',
       },
       readTime: {
-        pt: 'ensaio',
-        en: 'essay',
+        pt: '######',
+        en: '#####',
       },
       title: {
         pt: 'artigo #02 — engenharia, dados e filosofia em sistemas complexos',
         en: 'article #02 — engineering, data and philosophy in complex systems',
       },
       summary: {
-        pt: 'espaço estruturado e pronto para publicação de ensaios e reflexões conectando engenharia, dados e filosofia.',
-        en: 'structured space ready for publishing essays and reflections connecting engineering, data and philosophy.',
+        pt: '###### ########### # ###### #### ########## ## ####### # ######### ########## ##########, ##### # #########.',
+        en: '########## ##### ##### ### ########## ###### ### ########### ########## ###########, #### ### ##########.',
       },
       content: {
-        pt: '<p>este espaço está pronto para receber o conteúdo completo do ensaio de <strong>Geovani Kalil</strong>.</p>',
-        en: '<p>this space is ready to receive the full essay content by <strong>Geovani Kalil</strong>.</p>',
+        pt: '<p>#### ###### #### ###### #### ####### # ######## ######## ## ###### ## ####### #####.</p>',
+        en: '<p>#### ##### ## ##### ## ####### ### #### ##### ####### ## ####### #####.</p>',
       },
     },
   ],

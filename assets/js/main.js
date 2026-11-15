@@ -134,7 +134,7 @@
         x: Math.random() * width,
         y: initialRandomY ? Math.random() * (height + radius * 2) - radius : height + radius * 0.8,
         radius,
-        vy: 0.55 + Math.random() * 0.95, // Velocidade de subida constante da fumaça
+        vy: 0.55 + Math.random() * 0.95, // Velocidade de subida constante e suave da fumaça
         swayAmp: 0.4 + Math.random() * 0.9,
         swayFreq: 0.004 + Math.random() * 0.006,
         phase: Math.random() * Math.PI * 2,
@@ -432,7 +432,7 @@
      ======================================================================== */
   if (copyEmailBtn) {
     copyEmailBtn.addEventListener('click', async () => {
-      const email = copyEmailBtn.getAttribute('data-email') || 'contato@geovanikalil.site';
+      const email = copyEmailBtn.getAttribute('data-email') || 'kalil@geovanikalil.site';
       const dict = data.i18n[currentLang] || data.i18n.pt;
       try {
         await navigator.clipboard.writeText(email);
