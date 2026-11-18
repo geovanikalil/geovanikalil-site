@@ -1,17 +1,7 @@
-/* ==========================================================================
-   geovanikalil.site — estilos globais
-   paleta dinâmica: azul no topo (#38BDF8 / #0A1128) -> verde no final (#0FF05B)
-   tipografia: Planet Kosmos (hero), Instrument Serif (brand), Inter & JetBrains Mono
-   ========================================================================== */
-
 @font-face {
   font-family: 'Planet Kosmos';
   src:
-    url('../../public/fonts/PlanetKosmos.ttf') format('truetype'),
-    url('../../public/fonts/PLANK___.TTF') format('truetype'),
-    url('/public/fonts/PlanetKosmos.ttf') format('truetype'),
-    url('/public/fonts/PLANK___.TTF') format('truetype'),
-    url('/fonts/PlanetKosmos.ttf') format('truetype'),
+    url('../fonts/PLANK___.TTF') format('truetype'),
     url('/fonts/PLANK___.TTF') format('truetype');
   font-weight: normal;
   font-style: normal;
@@ -19,36 +9,30 @@
 }
 
 :root {
-  /* Paleta Principal: Azul Industrial (#0A1128) */
   --bg-primary: #0A1128;
   --bg-secondary: #070c1d;
   --bg-surface: rgba(11, 20, 48, 0.78);
   --bg-surface-hover: rgba(16, 30, 68, 0.92);
   --bg-elevated: #0f1a3c;
 
-  /* Texto Principal — Sempre Branco */
   --text-primary: #ffffff;
   --text-secondary: #ffffff;
   --text-muted: #ffffff;
 
-  /* Cor Dinâmica de Destaque e Botões (Inicia em Azul no topo e vai para Verde #0FF05B no scroll) */
   --accent-terminal: rgb(56, 189, 248);
   --accent-glow: rgba(56, 189, 248, 0.2);
   --accent-glow-strong: rgba(56, 189, 248, 0.38);
   --accent-subtle: rgba(56, 189, 248, 0.12);
 
-  /* Bordas e Divisores Dinâmicos */
   --border-subtle: rgba(56, 189, 248, 0.18);
   --border-blue: rgba(56, 189, 248, 0.36);
   --border-blue-strong: rgba(56, 189, 248, 0.72);
 
-  /* Tipografia */
   --font-display: 'Planet Kosmos', 'Inter', sans-serif;
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-mono: 'JetBrains Mono', 'Fira Code', Consolas, monospace;
   --font-serif-logo: 'Instrument Serif', Georgia, 'Times New Roman', serif;
 
-  /* Espaçamento e Layout */
   --container-max: 1180px;
   --header-height: 86px;
   --radius-sm: 10px;
@@ -56,12 +40,10 @@
   --radius-lg: 22px;
   --radius-full: 9999px;
 
-  /* Transições */
   --transition-fast: 160ms cubic-bezier(0.4, 0, 0.2, 1);
   --transition-base: 260ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Reset & Base */
 *,
 *::before,
 *::after {
@@ -87,7 +69,6 @@ body {
   position: relative;
 }
 
-/* Fundo com Fumaça Subindo e Transição de Azul (Topo) para Verde (Final) no Scroll */
 .bg-ambient {
   position: fixed;
   inset: 0;
@@ -107,7 +88,6 @@ body {
   opacity: 0.92;
 }
 
-/* Camada fosca (matte diffuser sem linhas/quadriculado) */
 .bg-grid {
   position: fixed;
   inset: 0;
@@ -118,13 +98,11 @@ body {
   background-color: rgba(8, 14, 34, 0.18);
 }
 
-/* Seleção de Texto */
 ::selection {
   background: var(--accent-glow-strong);
   color: #ffffff;
 }
 
-/* Tipografia & Utilitários */
 a {
   color: #ffffff;
   text-decoration: none;
@@ -196,9 +174,6 @@ pre,
   color: #ffffff;
 }
 
-/* ==========================================================================
-   Botões (Transicionam de Azul no Topo para Verde no Final conforme o Scroll)
-   ========================================================================== */
 .btn {
   --btn-accent: var(--accent-terminal);
   --btn-glow: var(--accent-glow);
@@ -263,9 +238,6 @@ pre,
   border-color: var(--btn-border);
 }
 
-/* ==========================================================================
-   Header / Navbar & Logo "kLL" + "geovani kALiL dev"
-   ========================================================================== */
 .site-header {
   position: fixed;
   top: 0;
@@ -363,7 +335,6 @@ pre,
   font-size: 0.9rem;
 }
 
-/* Language Switcher */
 .lang-switcher {
   display: inline-flex;
   align-items: center;
@@ -417,9 +388,6 @@ pre,
   border-color: var(--accent-terminal);
 }
 
-/* ==========================================================================
-   Hero Section
-   ========================================================================== */
 .hero {
   min-height: 100vh;
   padding-top: calc(var(--header-height) + 4.5rem);
@@ -468,7 +436,6 @@ pre,
   }
 }
 
-/* Título Principal do Início (// the wired) com Planet Kosmos */
 .hero-title {
   font-family: var(--font-display);
   font-weight: normal;
@@ -519,14 +486,6 @@ pre,
   color: #ffffff;
 }
 
-.hero-actions {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 1.25rem;
-}
-
-/* Hero Terminal / Profile Card */
 .hero-visual {
   position: relative;
 }
@@ -589,9 +548,6 @@ pre,
   color: var(--accent-terminal);
 }
 
-/* ==========================================================================
-   Sobre Mim / GK (About Section)
-   ========================================================================== */
 .about-grid {
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
@@ -654,7 +610,6 @@ pre,
   color: #ffffff;
 }
 
-/* Skills / Stack Card */
 .skills-card {
   background: var(--bg-surface);
   border: 1px solid var(--border-subtle);
@@ -714,9 +669,6 @@ pre,
   color: #070d20;
 }
 
-/* ==========================================================================
-   Projetos Técnicos (Projects Section)
-   ========================================================================== */
 .projects-toolbar {
   display: flex;
   flex-wrap: wrap;
@@ -881,9 +833,6 @@ pre,
   color: #ffffff;
 }
 
-/* ==========================================================================
-   Artigos & Discussões (Articles Section)
-   ========================================================================== */
 .articles-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
@@ -953,7 +902,6 @@ pre,
   margin-top: auto;
 }
 
-/* Article Modal Reader */
 .modal-backdrop {
   position: fixed;
   inset: 0;
@@ -1044,9 +992,6 @@ pre,
   margin-bottom: 1.35rem;
 }
 
-/* ==========================================================================
-   Contato & Links (Contact Section)
-   ========================================================================== */
 .contact-box {
   background: linear-gradient(135deg, rgba(13, 23, 54, 0.92) 0%, rgba(7, 12, 29, 0.96) 100%);
   border: 1px solid var(--border-blue);
@@ -1140,9 +1085,6 @@ pre,
   font-family: var(--font-mono);
 }
 
-/* ==========================================================================
-   Footer
-   ========================================================================== */
 .site-footer {
   padding: 3.25rem 0;
   border-top: 1px solid var(--border-subtle);
@@ -1162,9 +1104,6 @@ pre,
   gap: 1.5rem;
 }
 
-/* ==========================================================================
-   Responsive Design
-   ========================================================================== */
 @media (max-width: 960px) {
   .hero-grid,
   .about-grid,

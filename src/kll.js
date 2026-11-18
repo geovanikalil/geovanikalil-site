@@ -1,7 +1,3 @@
-/**
- * geovanikalil.site — script principal (interatividade, idioma pt/en, filtros e modal)
- */
-
 (function () {
   'use strict';
 
@@ -20,17 +16,13 @@
   const copyEmailBtn = document.getElementById('copy-email-btn');
   const currentYearSpan = document.getElementById('current-year');
   const langButtons = document.querySelectorAll('.lang-btn');
-  const bgAmbient = document.querySelector('.bg-ambient');
   const smokeCanvas = document.getElementById('smoke-canvas');
 
   const data = window.SITE_DATA || { i18n: {}, projects: [], articles: [] };
   let currentLang = localStorage.getItem('gk_lang') || 'pt';
   let currentFilter = 'all';
 
-  /* ========================================================================
-     1. Header Scroll, Transição Azul -> Verde (Fundo e Botões) & Scroll-Spy
-     ======================================================================== */
-  let scrollProgress = 0; // 0 no topo (azul), 1 no final do site (verde)
+  let scrollProgress = 0;
   let lastScrollY = window.scrollY;
   let scrollBoost = 0;
 
@@ -40,7 +32,6 @@
 
   function updateDynamicColors(progress) {
     const rootStyle = document.documentElement.style;
-    // Topo (t = 0): Azul Claro (#38BDF8 -> 56, 189, 248) | Final (t = 1): Verde Terminal (#0FF05B -> 15, 240, 91)
     const r = lerpChannel(56, 15, progress);
     const g = lerpChannel(189, 240, progress);
     const b = lerpChannel(248, 91, progress);
@@ -53,7 +44,6 @@
     rootStyle.setProperty('--border-blue', `rgba(${r}, ${g}, ${b}, 0.36)`);
     rootStyle.setProperty('--border-blue-strong', `rgba(${r}, ${g}, ${b}, 0.72)`);
 
-    // Atualiza também cada botão individualmente conforme sua altura na página + scroll
     const docHeight = Math.max(1, document.documentElement.scrollHeight);
     const allButtons = document.querySelectorAll('.btn, .filter-btn, .copy-btn');
     allButtons.forEach((btn) => {
@@ -110,7 +100,6 @@
   window.addEventListener('scroll', handleScroll, { passive: true });
   handleScroll();
 
-  /* Motor de Fumaça Subindo no Background (Azul no topo -> Verde no final) */
   if (smokeCanvas && smokeCanvas.getContext) {
     const ctx = smokeCanvas.getContext('2d');
     let width = (smokeCanvas.width = window.innerWidth);
@@ -134,12 +123,12 @@
         x: Math.random() * width,
         y: initialRandomY ? Math.random() * (height + radius * 2) - radius : height + radius * 0.8,
         radius,
-        vy: 0.55 + Math.random() * 0.95, // Velocidade de subida constante e suave da fumaça
+        vy: 0.55 + Math.random() * 0.95,
         swayAmp: 0.4 + Math.random() * 0.9,
         swayFreq: 0.004 + Math.random() * 0.006,
         phase: Math.random() * Math.PI * 2,
         alpha: 0.14 + Math.random() * 0.2,
-        toneShift: (Math.random() - 0.5) * 0.18, // Variação sutil entre nuvens de fumaça
+        toneShift: (Math.random() - 0.5) * 0.18,
       };
     }
 
@@ -156,7 +145,6 @@
       tick += 1;
       scrollBoost *= 0.9;
 
-      // Fundo base interpolando suavemente de Azul Industrial (#0A1128) no topo para Azul-Esverdeado escuro no final
       const bgR = Math.round(lerp(8, 5, scrollProgress));
       const bgG = Math.round(lerp(15, 24, scrollProgress));
       const bgB = Math.round(lerp(38, 28, scrollProgress));
@@ -166,11 +154,9 @@
       for (let i = 0; i < puffs.length; i++) {
         const p = puffs[i];
 
-        // Movimento de subida da fumaça + ondulação lateral orgânica
         p.y -= p.vy + scrollBoost * 0.35;
         p.x += Math.sin(tick * p.swayFreq + p.phase) * p.swayAmp;
 
-        // Se subiu completamente além do topo, renasce na base
         if (p.y < -p.radius * 1.1) {
           p.y = height + p.radius * 0.9;
           p.x = Math.random() * width;
@@ -179,8 +165,6 @@
           p.x = Math.random() * width;
         }
 
-        // Cor da fumaça interpolada pelo scroll:
-        // Topo (t = 0): Azul (#2E78EE / #38BDF8) -> Final (t = 1): Verde Terminal (#0FF05B)
         const t = Math.min(1, Math.max(0, scrollProgress + p.toneShift));
         const r = Math.round(lerp(48, 15, t));
         const g = Math.round(lerp(132, 240, t));
@@ -203,9 +187,6 @@
     requestAnimationFrame(renderSmoke);
   }
 
-  /* ========================================================================
-     2. Menu Mobile
-     ======================================================================== */
   if (mobileMenuBtn && navLinksContainer) {
     mobileMenuBtn.addEventListener('click', () => {
       const isOpen = navLinksContainer.classList.toggle('open');
@@ -220,9 +201,6 @@
     });
   }
 
-  /* ========================================================================
-     3. Renderização e Filtro de Projetos Técnicos
-     ======================================================================== */
   function renderProjects(filterCategory = 'all') {
     if (!projectsGrid) return;
 
@@ -292,9 +270,6 @@
     });
   });
 
-  /* ========================================================================
-     4. Renderização de Artigos / Discussões & Modal de Leitura
-     ======================================================================== */
   function openArticleModal(articleId) {
     const article = data.articles.find((a) => a.id === articleId);
     if (!article || !modalBackdrop) return;
@@ -386,9 +361,6 @@
     }
   });
 
-  /* ========================================================================
-     5. Seletor de Idioma (pt / en)
-     ======================================================================== */
   function resolveKey(obj, path) {
     return path.split('.').reduce((acc, part) => (acc && acc[part] !== undefined ? acc[part] : null), obj);
   }
@@ -427,9 +399,6 @@
 
   applyLanguage(currentLang);
 
-  /* ========================================================================
-     6. Copiar E-mail & Ano Atual
-     ======================================================================== */
   if (copyEmailBtn) {
     copyEmailBtn.addEventListener('click', async () => {
       const email = copyEmailBtn.getAttribute('data-email') || 'kalil@geovanikalil.site';

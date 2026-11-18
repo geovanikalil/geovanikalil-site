@@ -1,8 +1,3 @@
-/**
- * geovanikalil.site — dados bilíngues (pt / en), projetos e artigos
- * títulos preservados; textos descritivos censurados com #
- */
-
 window.SITE_DATA = {
   i18n: {
     pt: {
@@ -28,7 +23,7 @@ window.SITE_DATA = {
         metric2Label: '#### ########; ##### #############; ####### ## #####',
       },
       about: {
-        eyebrow: '01 // geovani kalil',
+        eyebrow: '01 // kALiL',
         title: 'formação e trajetória',
         p1: '##### #### ####### ### ## ########## — ########, ######### # ########. ## #######, ###### #### ##### #### ########### ######## ## ####### ## ##### # ############ ##########, ### #### ## #### ######## # ##### #############.',
         t1Period: 'especialização & pesquisa',
@@ -104,7 +99,7 @@ window.SITE_DATA = {
         metric2Label: '#### ########; ######## ######; #### ########',
       },
       about: {
-        eyebrow: '01 // geovani kalil',
+        eyebrow: '01 // kALiL',
         title: 'education and journey',
         p1: '## ######### ########## ##### #### ########### — #######, ########## ### ########. ## ########, # ##### #### ##### ## ####### ######### ## #### ######## ### ########## ############, ######## ## #### ######## ### ######## ######.',
         t1Period: 'specialization & research',
@@ -158,7 +153,6 @@ window.SITE_DATA = {
     },
   },
 
-  /* Seção de Projetos: apenas títulos visíveis, textos censurados com # */
   projects: [
     {
       id: 'proj-1',
@@ -219,7 +213,6 @@ window.SITE_DATA = {
     },
   ],
 
-  /* Seção de Artigos: apenas títulos visíveis, textos censurados com # */
   articles: [
     {
       id: 'art-1',

@@ -3,19 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>geovani kALiL dev — geovanikalil.site</title>
-  <meta name="description" content="portfólio e site pessoal de Geovani Kalil (kALiL) — engenheiro de controle e automação, engenheiro de software, analista de dados, especialista em deep learning e visão computacional." />
-  <meta name="author" content="Geovani Kalil" />
+  <title>kALiL dev — geovanikalil.site</title>
+  <meta name="description" content="portfólio e site pessoal de kALiL — engenheiro de controle e automação, engenheiro de software, analista de dados, especialista em deep learning e visão computacional." />
+  <meta name="author" content="kALiL" />
   <meta name="theme-color" content="#0A1128" />
 
-  <!-- Open Graph / Social -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://geovanikalil.site/" />
-  <meta property="og:title" content="geovani kALiL dev — geovanikalil.site" />
+  <meta property="og:title" content="kALiL dev — geovanikalil.site" />
   <meta property="og:description" content="// the wired" />
   <meta property="og:locale" content="pt_BR" />
 
-  <!-- Favicon & Manifest (Padrão Google Search: /favicon.ico, 48x48, 192x192 e SVG) -->
   <link rel="icon" href="/favicon.ico" sizes="48x48" />
   <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png" />
   <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png" />
@@ -23,27 +21,23 @@
   <link rel="apple-touch-icon" sizes="192x192" href="/apple-touch-icon.png" />
   <link rel="manifest" href="/site.webmanifest" />
 
-  <!-- Google Fonts: Inter, JetBrains Mono & Instrument Serif -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
 
-  <!-- Stylesheet -->
-  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="stylesheet" href="src/wired.css" />
 </head>
 <body>
-  <!-- Background Rising Smoke & Matte Diffuser -->
   <div class="bg-ambient" aria-hidden="true">
     <canvas id="smoke-canvas" class="smoke-canvas"></canvas>
   </div>
   <div class="bg-grid" aria-hidden="true"></div>
 
-  <!-- ==================== HEADER / NAVBAR ==================== -->
   <header class="site-header" id="site-header">
     <div class="container nav-container">
-      <a href="#inicio" class="brand" aria-label="geovani kALiL dev">
+      <a href="#inicio" class="brand" aria-label="kALiL dev">
         <span class="brand-mark">kLL</span>
-        <span class="brand-text">geovani kALiL dev</span>
+        <span class="brand-text">kALiL dev</span>
       </a>
 
       <div class="nav-right">
@@ -56,7 +50,6 @@
           <a href="#contato" class="btn btn-primary nav-cta" data-i18n="nav.cta">vamos conversar</a>
         </nav>
 
-        <!-- Seletor de idioma discreto e funcional (pt / en) -->
         <div class="lang-switcher" role="group" aria-label="idioma / language">
           <button type="button" class="lang-btn active" data-lang="pt">pt</button>
           <button type="button" class="lang-btn" data-lang="en">en</button>
@@ -74,7 +67,6 @@
   </header>
 
   <main>
-    <!-- ==================== 1. INÍCIO / HERO SECTION ==================== -->
     <section class="hero" id="inicio">
       <div class="container hero-grid">
         <div class="hero-content">
@@ -103,16 +95,15 @@
           </div>
         </div>
 
-        <!-- Visual Terminal Card -->
         <div class="hero-visual">
-          <div class="terminal-card" aria-label="bloco de código developer de Geovani Kalil">
+          <div class="terminal-card" aria-label="bloco de código developer de kALiL">
             <div class="terminal-header">
               <div class="terminal-dots" aria-hidden="true">
                 <span class="terminal-dot blue-1"></span>
                 <span class="terminal-dot blue-2"></span>
                 <span class="terminal-dot blue-3"></span>
               </div>
-              <span class="terminal-title">geovani kalil dev</span>
+              <span class="terminal-title">kALiL dev</span>
               <span></span>
             </div>
             <div class="terminal-body">
@@ -133,11 +124,10 @@ export default developer;</code></pre>
       </div>
     </section>
 
-    <!-- ==================== 2. SOBRE MIM ==================== -->
     <section class="section" id="sobre">
       <div class="container">
         <div class="section-header">
-          <span class="section-eyebrow" data-i18n="about.eyebrow">01 // geovani kalil</span>
+          <span class="section-eyebrow" data-i18n="about.eyebrow">01 // kALiL</span>
           <h2 class="section-title" data-i18n="about.title">formação e trajetória</h2>
         </div>
 
@@ -147,7 +137,6 @@ export default developer;</code></pre>
               ##### #### ####### ### ## ########## — ########, ######### # ########. ## #######, ###### #### ##### #### ########### ######## ## ####### ## ##### # ############ ##########, ### #### ## #### ######## # ##### #############.
             </p>
 
-            <!-- Marcos da Formação e Trajetória -->
             <div class="timeline-list">
               <div class="timeline-item">
                 <div class="timeline-period" data-i18n="about.t1Period">especialização & pesquisa</div>
@@ -173,7 +162,6 @@ export default developer;</code></pre>
             </div>
           </div>
 
-          <!-- Stack & Especialidades -->
           <aside class="skills-card" aria-label="especialidades">
             <h3 class="skills-card-title">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -232,7 +220,6 @@ export default developer;</code></pre>
       </div>
     </section>
 
-    <!-- ==================== 3. PROJETOS TÉCNICOS ==================== -->
     <section class="section" id="projetos">
       <div class="container">
         <div class="projects-toolbar">
@@ -252,12 +239,10 @@ export default developer;</code></pre>
           </div>
         </div>
 
-        <!-- Renderizado dinamicamente via assets/js/data.js e main.js -->
         <div class="projects-grid" id="projects-grid" aria-live="polite"></div>
       </div>
     </section>
 
-    <!-- ==================== 4. ARTIGOS / DISCUSSÕES ==================== -->
     <section class="section" id="artigos">
       <div class="container">
         <div class="section-header">
@@ -268,12 +253,10 @@ export default developer;</code></pre>
           </p>
         </div>
 
-        <!-- Renderizado dinamicamente via assets/js/data.js e main.js -->
         <div class="articles-list" id="articles-list"></div>
       </div>
     </section>
 
-    <!-- ==================== 5. CONTATO / LINKS ==================== -->
     <section class="section" id="contato">
       <div class="container">
         <div class="contact-box">
@@ -297,7 +280,6 @@ export default developer;</code></pre>
           </div>
 
           <div class="social-links-grid">
-            <!-- GitHub -->
             <a href="https://github.com/geovanikalil" target="_blank" rel="noopener noreferrer" class="social-card">
               <div class="social-icon">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -310,7 +292,6 @@ export default developer;</code></pre>
               </div>
             </a>
 
-            <!-- LinkedIn -->
             <a href="https://linkedin.com/in/geovanikalil" target="_blank" rel="noopener noreferrer" class="social-card">
               <div class="social-icon">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -325,7 +306,6 @@ export default developer;</code></pre>
               </div>
             </a>
 
-            <!-- Instagram -->
             <a href="https://instagram.com/geovanikalil" target="_blank" rel="noopener noreferrer" class="social-card">
               <div class="social-icon">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -340,7 +320,6 @@ export default developer;</code></pre>
               </div>
             </a>
 
-            <!-- Telegram -->
             <a href="https://t.me/geovanikalil" target="_blank" rel="noopener noreferrer" class="social-card">
               <div class="social-icon">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -354,7 +333,6 @@ export default developer;</code></pre>
               </div>
             </a>
 
-            <!-- Twitter / X -->
             <a href="https://x.com/geovanikalil" target="_blank" rel="noopener noreferrer" class="social-card">
               <div class="social-icon">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -373,7 +351,6 @@ export default developer;</code></pre>
     </section>
   </main>
 
-  <!-- ==================== MODAL DE LEITURA DE ARTIGOS ==================== -->
   <div class="modal-backdrop" id="article-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
     <div class="modal-dialog">
       <div class="modal-header">
@@ -392,20 +369,18 @@ export default developer;</code></pre>
     </div>
   </div>
 
-  <!-- ==================== FOOTER ==================== -->
   <footer class="site-footer">
     <div class="container footer-inner">
       <div>
-        © <span id="current-year">2026</span> <strong>Geovani Kalil</strong> (<strong>kALiL</strong> — geovanikalil.site). <span data-i18n="footer.rights">todos os direitos reservados.</span>
+        © <span id="current-year">2026</span> <strong>kALiL</strong> (geovanikalil.site). <span data-i18n="footer.rights">##### ## ######## ##########.</span>
       </div>
       <div data-i18n="footer.builtWith">
-        arte, tecnologia e filosofia.
+        ####, ########## # #########.
       </div>
     </div>
   </footer>
 
-  <!-- Scripts -->
-  <script src="assets/js/data.js"></script>
-  <script src="assets/js/main.js"></script>
+  <script src="src/content.js"></script>
+  <script src="src/kll.js"></script>
 </body>
 </html>
